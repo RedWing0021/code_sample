@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <meta name="description" content="Spotify clone made using html,css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="top-icons">
+          <div class="link-flex">
+            <img src="./assets/home.png" alt="Home" />
+            <a href="#">Home</a>
+          </div>
+          <div class="link-flex">
+            <img src="./assets/search.png" alt="Search" />
+            <a href="#">Search</a>
+          </div>
+        </div>
+        <div class="library">
+          <div class="flex-top">
+            <div class="link-flex">
+              <img src="./assets/playlist.png" alt="Library" />
+              <p>Your Library</p>
+            </div>
+            <div class="link-flex">
+              <img src="./assets/plus.png" />
+              <img src="./assets/boxes.png" />
+            </div>
+          </div>
+          <div class="link-flex" style="gap: 0.5rem">
+            <div class="chip">Playlists</div>
+            <div class="chip">Artists</div>
+            <!-- <div class="chip">Podcasts & Shows</div> -->
+          </div>
+          <div class="flex-top">
+            <img src="./assets/search.png" />
+            <p>Recents</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="main-content">
+        <div class="navbar">
+          <div class="link-flex">
+            <img src="./assets/back_navigation.png" />
+            <img src="./assets/forward_navigation.png" />
+          </div>
+          <!-- Navbar content -->
+          <div class="link-flex" style="gap: 0; column-gap: 0.5rem">
+            <div class="chip">Upgrade</div>
+            <div class="chip">Install App</div>
+          </div>
+        </div>
+
+        <h3>Devotional</h3>
+        <div class="cards-container">
+          <div class="card" >
+            <img src="assets/img/1.jpg" class="card-img" />
+            <div class="play" >
+              <span class=" button fa fa-play" id="0"></span>
+            </div>
+            <p class="card-name">Mere Bhole Nath</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+          <div class="card" >
+            <img src="assets/img/2.jpg" class="card-img" />
+            <div class="play" >
+              <span class="button fa fa-play" id="1" ></span>
+            </div>
+            <p class="card-name">Hare Krishna</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+        </div>
+
+        <h3>Made For You</h3>
+        <div class="cards-container">
+          <div class="card" >
+            <img src="assets/img/3.jpg" class="card-img" />
+            <div class="play">
+              <span class=" button fa fa-play" id="2"></span>
+            </div>
+            <p class="card-name">Lut Gaye</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+          <div class="card">
+            <img src="assets/img/4.jpg" class="card-img" />
+            <div class="play">
+              <span class="fa fa-play button" id="3"></span>
+            </div>
+            <p class="card-name">Raataan Lambiyan</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+          <div class="card">
+            <img src="assets/img/5.jpg" class="card-img" />
+            <div class="play">
+              <span class="fa fa-play button" id="4"></span>
+            </div>
+            <p class="card-name">Rabba Janda</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+        </div>
+
+        <h3>Raining for hours</h3>
+        <div class="cards-container">
+          <div class="card">
+            <img src="assets/img/6.jpg" class="card-img" />
+            <div class="play">
+              <span class="fa fa-play button" id="5" ></span>
+            </div>
+            <p class="card-name">Barsaat ki Dhun</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+          <div class="card">
+            <img src="assets/img/7.jpg" class="card-img" />
+            <div class="play">
+              <span class="fa fa-play button" id="6"></span>
+            </div>
+            <p class="card-name">Rim Jhim</p>
+            <p class="card-description">Jubin Nautiyal</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="player">
+
+        <div class="current-song">
+            <div style="width: 56px;height: 56px;">
+              <img id="songimage" src="assets/img/1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="song-info">
+          <span id="masterSongName">Mere Bhole Nath</span>
+        </div>
+
+        <div class="player-center">
+          <div class="player-controls">
+            <img
+              style="height: 1rem; opacity: 0.8"
+              src="./assets/shuffle.png"
+            />
+            <i class="fa fa-step-backward backward" id="previous"></i>
+            <i class="fa fa-play-circle play_pause" id="masterPlay"></i>
+            <i class="fa fa-step-forward forward" id="next"></i> 
+
+            <img
+              style="height: 1rem; opacity: 0.8"
+              src="./assets/loop.png"
+            />
+          </div>
+          <div class="player-timeline">
+            <span class="current_time" id="current_time">0:00</span>
+            <input
+              type="range"
+              class="timeline-slider"
+              id="myProgressBar"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+            />
+            <span class="total_time" id="total_time">0:00</span>
+          </div>
+        </div>
+
+        <div class="volume-controls">
+          <img
+            src="./assets/device.png"
+            style="height: 1rem; margin-right: 1rem; opacity: 0.8"
+            alt="Volume"
+          />
+          <img
+            src="./assets/playlist.png"
+            style="height: 1rem; margin-right: 1rem; opacity: 0.8"
+            alt="Settings"
+          />
+          <img
+            src="./assets/music.png"
+            style="height: 1rem; margin-right: 1rem; opacity: 0.8"
+            alt="Fullscreen"
+          />
+          <input
+            type="range"
+            class="volume-slider"
+            name="range"
+            id="myProgressBar"
+            min="0"
+            max="100"
+          />
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://kit.fontawesome.com/23cecef777.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+  </body>
+</html>
